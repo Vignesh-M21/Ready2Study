@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/commonStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <title>Verbiality/R2S</title>
+
+    <script>
+        function over(){
+            var a = new XMLHttpRequest();
+            a.open("GET","verbial.json",false);
+            a.send();
+            if(a.readyState == 4 && a.status == 200){
+                var result = a.responseText;
+                var Ap = JSON.parse(result);
+                var fun = "";
+                for(var i=0;i<Ap.length;i++)
+                {
+                    fun+='<br><div>\
+                        <h4>'+Ap[i]["pageno"]+'</h4>\
+                        <p>'+Ap[i]["question"]+'</p>\
+                            <ul>\
+                                <li>'+Ap[i]["choice1"]+'</li>\
+                                <li>'+Ap[i]["choice2"]+'</li>\
+                                <li>'+Ap[i]["choice3"]+'</li>\
+                                <li>'+Ap[i]["choice4"]+'</li>\
+                            </ul>\
+                            <br>\
+                            <details>\
+                                <summary>See Answer</summary>\
+                                <div class="box">\
+                                <p>'+Ap[i]["answer"]+'</p>\
+                                </div>\
+                            </details>\
+                    </div>';
+                }
+                document.getElementById("apti").innerHTML=fun;
+            }
+        }
+
+
+    </script>
+
+
+</head>
+<body onload="over()">
+    <section class="header">
+        <nav>
+        <div class="-link">
+        <a href="/"><p>Ready 2 study</p></a>
+        </div>
+            <div class="link" id="navLinks">
+                <i class="fa fa-times" onclick="onClose()"></i>
+                <ul>
+                    <li class="common"><a href="/index.html">Home</a></li>
+                    <li class="common"><a href="/Aptitude/aptitude.html">Aptitude</a></li>
+                    <li class="common"><a href="/Reasoning/reasoning.html">Reasoning</a></li>
+                    <li id="first"><a href="verbial.html">Verbial</a></li>
+                    <li class="common"><a href="/Coding/coding.html">Coding</a></li>
+                    <li class="common"><a href="/Contact us/contact us.html">Contect us</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="onMenu()"></i>
+        </nav>
+    </section> 
+
+<!-------java script--------->
+    <script>
+        var navLink = document.getElementById("navLinks");
+            function onMenu(){
+                    navLink.style.right= "0px";
+            }
+            function onClose(){
+                    navLink.style.right = "-200px";
+            }
+        
+    </script>
+    <div class="space">
+        <h1>
+            Verbiality
+        </h1>
+        <hr>
+        <div id="apti">
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

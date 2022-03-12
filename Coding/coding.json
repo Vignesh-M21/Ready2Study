@@ -1,0 +1,43 @@
+[
+    {
+        "pageno":"1.",
+        "question":"Given a number N. Find the minimum number of operations required to reach N starting from 0. You have 2 operations available:<br>   (1) Double the number<br>   (2)Add one to the number",
+        "choice1":"<b>Example 1:</b><br>Input: N = 8<br>Output: 4<br><b>Explanation:</b> 0 + 1 = 1, 1 + 1 = 2,<br>2 * 2 = 4, 4 * 2 = 8",
+        "choice2":"<b>Example 2:</b><br>Input: N = 7<br>Output: 5<br><b>Explanation:</b> 0 + 1 = 1, 1 + 1 = 2,<br>1 + 2 = 3, 3 * 2 = 6, 6 + 1 = 7",
+        "task":"<b>Your Task:</b><br>You don't need to read input or print anything. Your task is to complete the function <b>minOperation()</B> which accepts an integer N and return number of minimum operations required to reach N from 0.<br><br><b>Expected Time Complexity:<b> O(LogN)<br><b>Expected Auxiliary Space:<b> O(1)<br> <b>Constraints:<b><br>1 <= N <= 106",
+        "answer":"Java Coding<br>// Just for reference type variable<br>class Count {<br>   private int a;<br>  public Count(int x) {<br>      a = x;<br>    }<br>   public void update(int x)<br> {<br>        a = x;<br>  }<br>public int get()<br>   {<br>   return  a;<br>  }<br>   }<br>// Recursive function<br>int find(int n, Count c) {<br>    if (n == 0)<br> return 0;<br>   if (n == 1) {<br>   c.update(c.get() + 1);<br>      return 1;<br>   }<br>   if (n % 2 == 0)<br>     n = n / 2;<br>  else<br>         n = n - 1;<br>     c.update(c.get() + 1);<br>      return find(n, c);<br>  }<br>   int minOperation(int n) {<br>   Count c = new Count(0);<br>     find(n, c);<br>     return c.get();<br> }"
+        
+    },
+    {
+        "pageno":"2.",
+        "question":"Given a number N. Find the minimum number of operations required to reach N starting from 0. You have 2 operations available:<br>   (1) Double the number<br>   (2)Add one to the number",
+        "choice1":"<b>Example 1:</b><br>Input: N = 8<br>Output: 4<br><b>Explanation:</b> 0 + 1 = 1, 1 + 1 = 2,<br>2 * 2 = 4, 4 * 2 = 8",
+        "choice2":"<b>Example 2:</b><br>Input: N = 7<br>Output: 5<br><b>Explanation:</b> 0 + 1 = 1, 1 + 1 = 2,<br>1 + 2 = 3, 3 * 2 = 6, 6 + 1 = 7",
+        "task":"<b>Your Task:</b><br>You don't need to read input or print anything. Your task is to complete the function <b>minOperation()</B> which accepts an integer N and return number of minimum operations required to reach N from 0.<br><br><b>Expected Time Complexity:<b> O(LogN)<br><b>Expected Auxiliary Space:<b> O(1)<br> <b>Constraints:<b><br>1 <= N <= 106",
+        "answer":"Java Coding<br>// Just for reference type variable<br>class Count {<br>   private int a;<br>  public Count(int x) {<br>      a = x;<br>    }<br>   public void update(int x)<br> {<br>        a = x;<br>  }<br>public int get()<br>   {<br>   return  a;<br>  }<br>   }<br>// Recursive function<br>int find(int n, Count c) {<br>    if (n == 0)<br> return 0;<br>   if (n == 1) {<br>   c.update(c.get() + 1);<br>      return 1;<br>   }<br>   if (n % 2 == 0)<br>     n = n / 2;<br>  else<br>         n = n - 1;<br>     c.update(c.get() + 1);<br>      return find(n, c);<br>  }<br>   int minOperation(int n) {<br>   Count c = new Count(0);<br>     find(n, c);<br>     return c.get();<br> }"
+    },
+    {
+        "pageno":"3.",
+        "question":"Given a number N. Find the minimum number of operations required to reach N starting from 0. You have 2 operations available:<br>   (1) Double the number<br>   (2)Add one to the number",
+        "choice1":"<b>Example 1:</b><br>Input: N = 8<br>Output: 4<br><b>Explanation:</b> 0 + 1 = 1, 1 + 1 = 2,<br>2 * 2 = 4, 4 * 2 = 8",
+        "choice2":"<b>Example 2:</b><br>Input: N = 7<br>Output: 5<br><b>Explanation:</b> 0 + 1 = 1, 1 + 1 = 2,<br>1 + 2 = 3, 3 * 2 = 6, 6 + 1 = 7",
+        "task":"<b>Your Task:</b><br>You don't need to read input or print anything. Your task is to complete the function <b>minOperation()</B> which accepts an integer N and return number of minimum operations required to reach N from 0.<br><br><b>Expected Time Complexity:<b> O(LogN)<br><b>Expected Auxiliary Space:<b> O(1)<br> <b>Constraints:<b><br>1 <= N <= 106",
+        "answer":"Java Coding<br>// Just for reference type variable<br>class Count {<br>   private int a;<br>  public Count(int x) {<br>      a = x;<br>    }<br>   public void update(int x)<br> {<br>        a = x;<br>  }<br>public int get()<br>   {<br>   return  a;<br>  }<br>   }<br>// Recursive function<br>int find(int n, Count c) {<br>    if (n == 0)<br> return 0;<br>   if (n == 1) {<br>   c.update(c.get() + 1);<br>      return 1;<br>   }<br>   if (n % 2 == 0)<br>     n = n / 2;<br>  else<br>         n = n - 1;<br>     c.update(c.get() + 1);<br>      return find(n, c);<br>  }<br>   int minOperation(int n) {<br>   Count c = new Count(0);<br>     find(n, c);<br>     return c.get();<br> }"
+    },
+    {
+        "pageno":"4.",
+        "question":"Given a number N. Find the minimum number of operations required to reach N starting from 0. You have 2 operations available:<br>   (1) Double the number<br>   (2)Add one to the number",
+        "choice1":"<b>Example 1:</b><br>Input: N = 8<br>Output: 4<br><b>Explanation:</b> 0 + 1 = 1, 1 + 1 = 2,<br>2 * 2 = 4, 4 * 2 = 8",
+        "choice2":"<b>Example 2:</b><br>Input: N = 7<br>Output: 5<br><b>Explanation:</b> 0 + 1 = 1, 1 + 1 = 2,<br>1 + 2 = 3, 3 * 2 = 6, 6 + 1 = 7",
+        "task":"<b>Your Task:</b><br>You don't need to read input or print anything. Your task is to complete the function <b>minOperation()</B> which accepts an integer N and return number of minimum operations required to reach N from 0.<br><br><b>Expected Time Complexity:<b> O(LogN)<br><b>Expected Auxiliary Space:<b> O(1)<br> <b>Constraints:<b><br>1 <= N <= 106",
+        "answer":"Java Coding<br>// Just for reference type variable<br>class Count {<br>   private int a;<br>  public Count(int x) {<br>      a = x;<br>    }<br>   public void update(int x)<br> {<br>        a = x;<br>  }<br>public int get()<br>   {<br>   return  a;<br>  }<br>   }<br>// Recursive function<br>int find(int n, Count c) {<br>    if (n == 0)<br> return 0;<br>   if (n == 1) {<br>   c.update(c.get() + 1);<br>      return 1;<br>   }<br>   if (n % 2 == 0)<br>     n = n / 2;<br>  else<br>         n = n - 1;<br>     c.update(c.get() + 1);<br>      return find(n, c);<br>  }<br>   int minOperation(int n) {<br>   Count c = new Count(0);<br>     find(n, c);<br>     return c.get();<br> }"
+    },
+    {
+        "pageno":"5.",
+        "question":"Given a number N. Find the minimum number of operations required to reach N starting from 0. You have 2 operations available:<br>   (1) Double the number<br>   (2)Add one to the number",
+        "choice1":"<b>Example 1:</b><br>Input: N = 8<br>Output: 4<br><b>Explanation:</b> 0 + 1 = 1, 1 + 1 = 2,<br>2 * 2 = 4, 4 * 2 = 8",
+        "choice2":"<b>Example 2:</b><br>Input: N = 7<br>Output: 5<br><b>Explanation:</b> 0 + 1 = 1, 1 + 1 = 2,<br>1 + 2 = 3, 3 * 2 = 6, 6 + 1 = 7",
+        "task":"<b>Your Task:</b><br>You don't need to read input or print anything. Your task is to complete the function <b>minOperation()</B> which accepts an integer N and return number of minimum operations required to reach N from 0.<br><br><b>Expected Time Complexity:<b> O(LogN)<br><b>Expected Auxiliary Space:<b> O(1)<br> <b>Constraints:<b><br>1 <= N <= 106",
+        "answer":"Java Coding<br>// Just for reference type variable<br>class Count {<br>   private int a;<br>  public Count(int x) {<br>      a = x;<br>    }<br>   public void update(int x)<br> {<br>        a = x;<br>  }<br>public int get()<br>   {<br>   return  a;<br>  }<br>   }<br>// Recursive function<br>int find(int n, Count c) {<br>    if (n == 0)<br> return 0;<br>   if (n == 1) {<br>   c.update(c.get() + 1);<br>      return 1;<br>   }<br>   if (n % 2 == 0)<br>     n = n / 2;<br>  else<br>         n = n - 1;<br>     c.update(c.get() + 1);<br>      return find(n, c);<br>  }<br>   int minOperation(int n) {<br>   Count c = new Count(0);<br>     find(n, c);<br>     return c.get();<br> }"
+    }
+]
