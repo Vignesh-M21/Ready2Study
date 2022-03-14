@@ -32,7 +32,8 @@ ul li{
     width: 100%;
     height: auto;
     background-color: black;
-    position: relative;
+    position: sticky;
+    top: 0;
     justify-content:space-between;
 }
 
