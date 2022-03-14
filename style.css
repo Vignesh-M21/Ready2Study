@@ -326,7 +326,7 @@ path{
 }
 @media(max-width: 700px){
     .verbial{
-        flex-direction: column-reverse;
+        flex-direction: column;
         height: 400px;
     }
 }
