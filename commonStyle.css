@@ -15,8 +15,14 @@ h4{
     font-weight: 700;
    
 }
-p{
+h5{
     display: inline;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+}
+p{
+    display: block;
     color: black;
     font-size: 15px;
     font-weight: 500;
@@ -107,16 +113,21 @@ details summary{
     cursor: pointer;
 }
 details .box {
+    display: block;
     width: 90%;
     height: auto;
     padding: 20px;
     margin-top: 1%;
     background-color: #eeeeee;
     box-shadow: 1px 1px 10px #bbbbbb;
+    white-space: pre;
+    overflow-x: auto;
 }
 details .box p {
     font-size: 15px;
     font-weight: 500;
+    text-align: left;
+    z-index: -1;
 }
 @media(max-width: 700px) {
     .space{
@@ -208,6 +219,43 @@ details .box p {
     font-size: 20px;
 }
 
+.pagination{
+    width: 100%;
+    height: auto;
+}
+.aline{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 20px;
+    background-color: rgb(241, 235, 235);
+    border-radius: 30px;
+}
+.active{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 15px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.active:nth-child(1){
+    margin-left: 10px;
+}
+.active:last-child{
+    margin-right: 10px;
+}
+.active:hover{
+    color: tomato;
+    background-color: white;
+    transition: all 0.4s ease-in;
+}
+.act{
+    color: tomato;
+    background-color: white;
+
+} 
 
 
 

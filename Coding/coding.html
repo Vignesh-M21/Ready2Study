@@ -6,50 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/commonStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
     <title>Coding/R2S</title>
-
-    <script>
-        function over(){
-            var a = new XMLHttpRequest();
-            a.open("GET","coding.json",false);
-            a.send();
-            if(a.readyState == 4 && a.status == 200){
-                var result = a.responseText;
-                var Ap = JSON.parse(result);
-                var fun = "";
-                for(var i=0;i<Ap.length;i++)
-                {
-                    fun+='<br><div>\
-                        <h4>'+Ap[i]["pageno"]+'</h4>\
-                        <p>'+Ap[i]["question"]+'</p>\
-                            <ul>\
-                                <li>'+Ap[i]["choice1"]+'</li>\
-                                <li>'+Ap[i]["choice2"]+'</li>\
-                            </ul>\
-                            <p>'+Ap[i]["task"]+'</p>\
-                            <br>\
-                            <details>\
-                                <summary>See Answer</summary>\
-                                <div class="box">\
-                                <p>'+Ap[i]["answer"]+'</p>\
-                                </div>\
-                            </details>\
-                    </div>';
-                }
-                document.getElementById("apti").innerHTML=fun;
-            }
-        }
-
-
-    </script>
-
-
 </head>
-<body onload="over()">
+<body onload="pageTwo(0,5)">
     <section class="header">
         <nav>
         <div class="-link">
@@ -89,8 +52,19 @@
         <div id="apti">
 
         </div>
-
+        <div class="pagination">
+            <ul class="aline">
+                <li class="active act" onclick="pageTwo(0,5)">1</li>
+                <li class="active" onclick="pageTwo(6,10)">2</li>
+                <li class="active" onclick="pageTwo(11,15)">3</li>
+                <li class="active" onclick="pageTwo(16,20)">4</li>
+                <li class="active" onclick="pageTwo(21,25)">5</li>
+            </ul>
+        </div>
     </div>
+
+   
+    <script src="./coding.js"></script>
     
 </body>
 </html>

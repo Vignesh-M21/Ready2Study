@@ -6,17 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/commonStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
     <title>Apritude/R2S</title>
-
-    
-
-
 </head>
-<body onload="over()">
+
+<body onload="pageTwo(0,5)">
     <section class="header">
         <nav>
         <div class="-link">
@@ -55,16 +52,17 @@
         </h1>
         <hr>
         <div id="apti"></div>
-        <div class="z">
-            <ul class="pagination">
-                <li class="pageNumber  active"><a href="aptitude.html">1</a></li>
-                <li class="pageNumber"><a href="aptitude1.html">2</a></li>
+   
+        <div class="pagination">
+            <ul class="aline">
+                <li class="active act" onclick="pageTwo(0,4)">1</li>
+                <li class="active" onclick="pageTwo(5,10)">2</li>
+                <li class="active" onclick="pageTwo(11,15)">3</li>
+                <li class="active" onclick="pageTwo(16,20)">4</li>
+                <li class="active" onclick="pageTwo(21,25)">5</li>
             </ul>
         </div>
-    </div>
-
-    </script>
-    <script src="Aptitude.js"> </script>
+    <script src="Aptitude.js"></script>
     
 </body>
 </html>
